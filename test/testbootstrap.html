@@ -25,7 +25,8 @@
 
       body #bodyContent {
         -webkit-transition: -webkit-filter .25s;
-        -mox-transition: filter .25s;
+        -moz-transition: filter .25s;
+        transition: filter .25s;
       }
 
       body.ModallaOpen #bodyContent {
@@ -33,7 +34,7 @@
         -moz-filter: blur(3px);
         -o-filter: blur(3px);
         -ms-filter: blur(3px);
-        filter: url(./blur.svg#blur);
+        filter: blur(3px);
       }
 
       .ModallaOverlay {
