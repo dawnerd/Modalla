@@ -51,6 +51,10 @@ Modalla::open = (target) ->
     modal.attr 'id', modalData.modalName
 
   overlay = $ '<div class="ModallaOverlay"></div>'
+
+  overlay.css
+    'top': window.scrollY
+
   modal.append overlay
 
   modalFrame = $ '<div class="ModallaFrame"></div>'
@@ -65,6 +69,7 @@ Modalla::open = (target) ->
       'width': modalData.width
       'left': '50%'
       'margin-left': (modalData.width / 2) * -1
+      'top': window.scrollY + 50
 
   modalFrame.append content
 
