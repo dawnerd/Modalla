@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Modalla test</title>
+  <style>
+    #loginForm { display: none; }
+
+    body.ModallaOpen #bodyContent {
+      -webkit-filter: blur(2px);
+    }
+
+    .ModallaOverlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,.15);
+    }
+
+    .ModallaFrame {
+      top: 50px;
+      background: #fff;
+      min-height: 300px;
+    }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="https://raw.github.com/dawnerd/Prison/master/lib/prison.min.js"></script>
+</head>
+<body> 
+  <div id="bodyContent">
+    <p>
+      <a href="http://google.com" data-modalla-trigger data-modalla-content="#loginForm">Click me to login</a>
+    </p>
+
+    <div id="loginForm" data-width="300" data-modal-name="Login">
+      <p>This is some content that will be shown inside of the modal.
+    </div>
+  </div>
+
+  <script src="../lib/modalla.js"></script>
+  <script>
+    // For testing Prison
+    
+    var body = $('#bodyContent');
+    for(var i = 100; i--;) {
+      body.append('<p>This wont scroll</p>');
+    }
+
+    var modal = new Modalla();
+  </script>
+</body>
+</html>
