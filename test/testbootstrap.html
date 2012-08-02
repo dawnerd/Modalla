@@ -25,10 +25,15 @@
 
       body #bodyContent {
         -webkit-transition: -webkit-filter .25s;
+        -mox-transition: filter .25s;
       }
 
       body.ModallaOpen #bodyContent {
         -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: url(./blur.svg#blur);
       }
 
       .ModallaOverlay {
