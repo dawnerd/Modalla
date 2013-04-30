@@ -40,7 +40,7 @@ Modalla::open = (target) ->
   target = $ target
   content = target.html()
   body = $ 'body'
-  modalData =  target.data()
+  modalData =  target.data() || {}
 
   body.addClass 'ModallaOpen'
 
