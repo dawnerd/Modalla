@@ -1,0 +1,10 @@
+{
+  "name": "Modalla",
+  "version": "1.0.0",
+  "main": "lib/modalla.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
